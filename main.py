@@ -51,8 +51,8 @@ async def websocket_endpoint(websocket: WebSocket, room_id: str):
         room["sockets"].remove(websocket)
 
 # --- Бот для команд /play и /duel ---
-TOKEN = "ТВОЙ_ТОКЕН_ОТ_BOTFATHER"
-BOT_USERNAME = "ИМЯ_ТВОЕГО_БОТА"
+TOKEN = "8760930148:AAFZULQP8zgNRTUwoWvbhX-atxuKz1CxqEA"
+BOT_USERNAME = "me_chess_bot"
 
 async def play(update: Update, context: ContextTypes.DEFAULT_TYPE):
     room_id = update.effective_chat.id
@@ -76,3 +76,4 @@ async def start_bot():
     await application.initialize()
     await application.start()
     asyncio.create_task(application.updater.start_polling())
+
